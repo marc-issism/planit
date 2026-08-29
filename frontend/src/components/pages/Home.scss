@@ -1,0 +1,26 @@
+@use "../../styles/core/typography.scss";
+@use "../../styles/core/spacing.scss";
+
+.home {
+  padding-top: spacing.$page;
+
+  &__container {
+    @include spacing.flex-layout;
+    gap: spacing.$outer-component;
+  }
+
+  &__brand {
+    @include spacing.flex-layout(row);
+    font-size: typography.$font-size-largest;
+  }
+
+  &__description {
+    @include spacing.flex-layout(row);
+    font-size: typography.$font-size-medium;
+  }
+
+  &__button {
+    @include spacing.flex-layout(row);
+    font-size: typography.$font-size-medium;
+  }
+}

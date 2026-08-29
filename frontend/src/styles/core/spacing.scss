@@ -1,0 +1,14 @@
+$inner-component: 16px;
+$outer-component: 32px;
+$page: 128px;
+
+@mixin flex-layout(
+  $orientation: column,
+  $justification: center,
+  $alignment: center
+) {
+  display: flex;
+  flex-direction: $orientation;
+  justify-content: $justification;
+  align-content: $alignment;
+}
