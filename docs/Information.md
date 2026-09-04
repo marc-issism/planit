@@ -6,3 +6,7 @@
 `/plan/view/xXxXxX` -> `PlanView.tsx`, `editMode` is `false`
 
 ### User Flow
+
+### Todo
+
+- [ ] Add icons to the widgets

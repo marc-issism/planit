@@ -1,23 +1,12 @@
 import { useNavigate } from "react-router";
 import "./Home.scss";
-import usePlanCreateWidgetsStore from "../../../store/planCreateWidgets";
-import WidgetSelectModal from "../../widgets/WidgetSelectModal";
 
 const Home = () => {
   const navigate = useNavigate();
 
-  const selectedWidgets = usePlanCreateWidgetsStore((state) => state.widgets);
-  const addWidget = usePlanCreateWidgetsStore((state) => state.addWidget);
-
   const goToPlanCreate = () => {
     navigate("/plan/create", { state: { from: "home" } });
-    addWidget({
-      id: 1,
-      header: "Time Widget",
-      content: <>Time Widget 19:56</>,
-    });
   };
-  console.log(selectedWidgets);
 
   return (
     <div className="home">
@@ -30,7 +19,6 @@ const Home = () => {
           <button onClick={goToPlanCreate}>Planit</button>
         </div>
       </div>
-      <WidgetSelectModal />
     </div>
   );
 };

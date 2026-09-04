@@ -10,12 +10,22 @@ interface planCreateWidgetsStore {
 const usePlanCreateWidgetsStore = create<planCreateWidgetsStore>((set) => ({
   widgets: [],
   addWidget: (widget: Widget) =>
-    set((state) => ({ widgets: [...state.widgets, widget] })),
+    set((state) => {
+      if (
+        state.widgets.some(
+          (searchWidget) => searchWidget.metadata.id == widget.metadata.id,
+        )
+      ) {
+        return { ...state };
+      }
+
+      return { ...state, widgets: [...state.widgets, widget] };
+    }),
   removeWidget: (widgetId: number) =>
     set((state) => ({
       widgets: [
         ...state.widgets.filter((widget) => {
-          return widget.id != widgetId;
+          return widget.metadata.id != widgetId;
         }),
       ],
     })),
