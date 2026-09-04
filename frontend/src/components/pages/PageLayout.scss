@@ -1,0 +1,7 @@
+@use "../../styles/core/spacing.scss";
+
+.page-layout {
+  display: flex;
+  flex-direction: column;
+  margin: 120px;
+}

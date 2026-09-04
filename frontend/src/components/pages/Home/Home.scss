@@ -1,9 +1,7 @@
-@use "../../styles/core/typography.scss";
-@use "../../styles/core/spacing.scss";
+@use "../../../styles/core/typography.scss";
+@use "../../../styles/core/spacing.scss";
 
 .home {
-  padding-top: spacing.$page;
-
   &__container {
     @include spacing.flex-layout;
     gap: spacing.$outer-component;

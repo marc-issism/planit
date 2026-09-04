@@ -1,4 +1,5 @@
 {
+  "author": "Marcus Cua <marcuscua.com> (https://marcuscus.com)",
   "dependencies": {
     "scss": "^0.2.4"
   }

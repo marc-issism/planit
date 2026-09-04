@@ -1,9 +1,10 @@
-import type { ReactNode } from 'react';
+import type { ReactNode } from "react";
 
 export interface Widget {
-  iconHref: string;
-  iconAlt: string;
+  id: number;
+  iconHref?: string;
+  iconAlt?: string;
   header: string;
   content: ReactNode | null;
-  modal: ReactNode | null;
+  modal?: ReactNode | null;
 }
